@@ -29,7 +29,7 @@ The first one represents the scenario in which we, as a diploid organism, got th
 
 The other case needs some further calculation in order to make a decision. For this purpose we will use formula for binomial distribution 
 <p align="center">
-  <img src="https://render.githubusercontent.com/render/math?math=p=\binom{n}{k}*p^{k}*(1-p)^{n-k}">
+  <img src="https://render.githubusercontent.com/render/math?math=p=\binom{n}{k}p^{k}(1-p)^{n-k}">
 </p>
 
 
