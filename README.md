@@ -29,9 +29,9 @@ The first one represents the scenario in which we, as a diploid organism, got th
 
 The other case needs some further calculation in order to make a decision. For this purpose we will use formula for binomial distribution 
 <p align="center">
-  <img src="https://render.githubusercontent.com/render/math?math=p=\binom{n}{k}p^{k}(1-p)^{n-k}" \Large>
+  <img src="https://render.githubusercontent.com/render/math?math=f=\binom{n}{k}p^{k}(1-p)^{n-k}" \Large>
 </p>
-where n represents total number of bases sequenced at the particular position, p is the probability of success (the probability that the pileup shows just what really is located at the particular position in the DNA).
+where n represents total number of bases sequenced at the particular position, p is the probability of success (the probability that the pileup shows just what really is located at the particular position in the DNA) and k represents number of times we got the exact base we want to calculate f for.
 
 
 
