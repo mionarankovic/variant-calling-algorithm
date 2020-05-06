@@ -31,7 +31,7 @@ The other case needs some further calculation in order to make a decision. For t
 <p align="center">
   <img src="https://render.githubusercontent.com/render/math?math=f=\binom{n}{k}p^{k}(1-p)^{n-k}" \Large>
 </p>
-where n represents total number of bases sequenced at the particular position, p is the probability of success (the probability that the pileup shows just what really is located at the particular position in the DNA) and k represents number of times we got the exact base we want to calculate f for.
+where n represents total number of bases sequenced at the particular position, p is the probability of success (the probability that the pileup shows just what really is located at the particular position in the DNA) and k represents number of times we got the exact base we want to calculate <f\i> for.
 
 
 
@@ -45,5 +45,4 @@ where n represents total number of bases sequenced at the particular position, p
 
 
  
-### Deciding on binomial distribution
 
