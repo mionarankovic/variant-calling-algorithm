@@ -36,9 +36,7 @@ The other case needs some further calculation in order to make a decision. For t
 where n represents total number of bases sequenced at the particular position, p is the probability of success (the probability that the pileup shows just what really is located at the particular position in the DNA) and k represents number of times we got the exact base we want to calculate f for.
 After computing probabilities of all possible explanations of pileup, we pick the most probable one.
 
-
-
-
+The output of the variant calling algorithm is VCF 4.2 file.
 
 
 
