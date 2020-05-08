@@ -38,6 +38,18 @@ After computing probabilities of all possible explanations of pileup, we pick th
 
 The output of the variant calling algorithm is VCF 4.2 file.
 
+## Data
+
+As mentioned previously, the algorithm takes pileup file as an input and produces the output VCF 4.2 file. 
+
+For the purposes of this project, pileup file is generated with samtools pileup tool. This tool takes both reference and bam file as an input to produce the output in pileup format. 
+
+The bam file is created from the exome portions of chromosomes 21, 22, Y and MT and is realigned with the latest version of human genome compatible with b37 by GATK. The reference fasta file is used in the 1000 genomes phase 3 project. It contains chromosomes (1-22, X, Y and MT), unlocalized and unplaced sequences (GL contigs), Epstein–Barr virus (NC_007605), decoy sequences (hs37d5, consisting of BAC+Huref+NA12878+Fosmid clones).
+
+The test VCF file is created with bcftools call tool.
+
+## Results
+
 
 
 
