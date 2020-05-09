@@ -72,13 +72,21 @@ The second choice is p = 0.8. It seems to be a pessimistic choice, as the qualit
   <img src="images/Conf_matrix_p08.png" height = 250 width = 450>
 </p>
 
-These results are much better than the previous one. True predictions went up, while false predictions decreased. As false positives decreased twenty-fold, precision is almost ten times larger. 
+These results are much better than the previous one. True predictions went up, while false predictions decreased. As false positives decreased twenty-fold, precision is almost ten times larger. Variants are again shown in the figure below.
 
 <p align="left">
   <img src="images/grafikp08.png">
 </p>
 
+What is most striking when looking at the figure, is that the false positives that had very small number of second alleles (1 or 2) are now missing. As the probability of the success decreased, algorithm is more flexible and is allowed to consider whether some low count site represents the error or not. 
 
+It is as well interesting to notice that false predictions are mostly overlapped with the true ones. This means that decreasing probability of success would not lead to any significant improvement, as the count of potential alleles does not separate positives from negatives. What is left to consider is the type of the variant. 
+
+Indels are known to occur less frequently in the genome than SNVs do, so the last choice is to set probability of success to be adaptive - p = 0.8 if the site is a SNV or a match and p = 0.6 if it is an indel. The confusion matrix in this case is shown below. 
+
+<p align="left">
+  <img src="images/Conf_matrix_adaptive.png" height = 250 width = 450>
+</p>
 
 
 
