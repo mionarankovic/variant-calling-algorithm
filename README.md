@@ -10,7 +10,6 @@
 <p align="center">
   <img src="images/intro_diag.png">
 </p>
-Fig 1. Steps in variation calling process
 
 The input of variant calling algorithm is a pileup file. Pileup file is a text file that summarizes the base calls of aligned reads to a reference sequence. A couple of lines in pileup file is shown below. Each line summarize one particular position in the genome. (Find out more 
 
@@ -18,7 +17,6 @@ The input of variant calling algorithm is a pileup file. Pileup file is a text f
 <p align="center">
   <img src="images/pileup_lines.png">
 </p>
-Fig 2. Pileup file
 
 There will be one of two possible cases at each position in the pileup file:
   1. All bases will be the same.
@@ -55,19 +53,24 @@ The first choice is p = 0.9. The confusion matrix is shown below.
 <p align="left">
   <img src="images/Confusion_matrix_09.png" height = 250 width = 450>
 </p>
-Fig 3. Confusion matrix for p = 0.9
 
 According to metrics written next to the confusion matrix, these results seem to be very bad - precision is unacceptably low. What caused this is a large number of false positives, variants that are present in the implemented solution, but not in the bcftools call tool. Variants are shown in the figure below (note that not all variants are shown in the figure, for the purpose of making it interpretable).
 
 <p align="left">
   <img src="images/grafikp09.png">
 </p>
-Fig 4. Variants ilustration for p = 0.9
 
 As it can be seen from the figure, decision making is pretty pessimistic in this case - no matter how large the number of the first allele appearance during the sequencing process is, only one appearance of a different allele will cause the algorithm to call heterozygous variant. This is because the algorithm is pretty much sure there is no error in the previous steps of the analysis, so what is written in the pileupfile is what really occurs in the genome.
 
 The second choice is p = 0.8. It seems to be pessimistic choice, as the quality strings in the pileup file indicate that base call accuracies go up to 99.9% for each base. This choice is good for understanding the decision making though. 
 
+<p align="left">
+  <img src="images/cm_p08.png" height = 250 width = 450>
+</p>
+
+<p align="left">
+  <img src="images/grafikp08.png">
+</p>
 
 
 
