@@ -50,6 +50,11 @@ The test VCF file is created with bcftools call tool.
 
 ## Results
 
+There are not many parameters that have to be tuned for this algorithm to be successful, but choosing the right probability of success that appears in the previously mentioned formula for binomial distibution is quiet challenging. Several ways of choosing this parameter will be introduced in this section.
+
+The first choice is p = 0.9. It seems to be pretty pessimistic to chose that value, as the quality strings in the pileup file indicate that base call accuracies go up to 99.9% for each base. This choice is good for understanding the decision making though. 
+
+
 
 
 
