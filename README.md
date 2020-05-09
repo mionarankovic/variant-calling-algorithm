@@ -65,7 +65,7 @@ As it can be seen from the figure, decision making is pretty pessimistic in this
 The second choice is p = 0.8. It seems to be pessimistic choice, as the quality strings in the pileup file indicate that base call accuracies go up to 99.9% for each base. This choice is good for understanding the decision making though. 
 
 <p align="left">
-  <img src="images/cm_p08.png" height = 250 width = 450>
+  <img src="images/Conf_matrix_p08.png" height = 250 width = 450>
 </p>
 
 <p align="left">
