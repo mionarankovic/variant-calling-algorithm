@@ -54,7 +54,9 @@ The first choice is p = 0.9. The confusion matrix is shown below.
   <img src="images/Confusion_matrix_09.png" height = 250 width = 450>
 </p>
 
-According to metrics written next to the confusion matrix, these results seem to be very bad - precision is unacceptably low. What caused this is a large number of false positives, variants that are present in the implemented solution, but not in the bcftools call tool. Variants are shown in the figure below (note that not all variants are shown in the figure, for the purpose of making it interpretable).
+According to metrics written next to the confusion matrix, these results seem to be very bad - precision is unacceptably low. What caused this is a large number of false positives, variants that are present in the implemented solution, but not in the bcftools call tool. This choice is good for understanding the decision making though. 
+
+Variants are shown in the figure below (note that not all variants are shown in the figure, for the purpose of making it interpretable).
 
 <p align="left">
   <img src="images/grafikp09.png">
@@ -62,11 +64,15 @@ According to metrics written next to the confusion matrix, these results seem to
 
 As it can be seen from the figure, decision making is pretty pessimistic in this case - no matter how large the number of the first allele appearance during the sequencing process is, only one appearance of a different allele will cause the algorithm to call heterozygous variant. This is because the algorithm is pretty much sure there is no error in the previous steps of the analysis, so what is written in the pileupfile is what really occurs in the genome.
 
-The second choice is p = 0.8. It seems to be pessimistic choice, as the quality strings in the pileup file indicate that base call accuracies go up to 99.9% for each base. This choice is good for understanding the decision making though. 
+It is important to note that how you interprete these metrics strongly depends on what your survey goal is. It is sometimes much more important to detect all positives, so number of false negatives (missed detection) has to be as small as posible. In this case, it is probably less important not to have false positives (false alarm).
+
+The second choice is p = 0.8. It seems to be a pessimistic choice, as the quality strings in the pileup file indicate that base call accuracies go up to 99.9% for each base. Confusion matrix is shown below. 
 
 <p align="left">
   <img src="images/Conf_matrix_p08.png" height = 250 width = 450>
 </p>
+
+These results are much better than the previous one. True predictions went up, while false predictions decreased. As false positives decreased twenty-fold, precision is almost ten times larger. 
 
 <p align="left">
   <img src="images/grafikp08.png">
