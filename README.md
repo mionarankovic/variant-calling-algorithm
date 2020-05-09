@@ -50,9 +50,21 @@ The test VCF file is created with bcftools call tool.
 
 ## Results
 
-There are not many parameters that have to be tuned for this algorithm to be successful, but choosing the right probability of success that appears in the previously mentioned formula for binomial distibution is quiet challenging. Several ways of choosing this parameter will be introduced in this section.
+The first choice is p = 0.9. The confusion matrix is shown below. 
 
-The first choice is p = 0.9. It seems to be pretty pessimistic to chose that value, as the quality strings in the pileup file indicate that base call accuracies go up to 99.9% for each base. This choice is good for understanding the decision making though. 
+<p align="left">
+  <img src="images/Confusion_matrix_09.png" height = 250 width = 430>
+</p>
+
+According to metrics written next to the confusion matrix, these results seem to be very bad - precision is unacceptably low. What caused this is a large number of false positives, variants that are present in the implemented solution, but not in the bcftools call tool. Variants are shown in the figure below (note that not all variants are shown in the figure, for the purpose of making it interpretable).
+
+<p align="left">
+  <img src="images/grafikp09.png">
+</p>
+
+As it can be seen from the figure, decision making is pretty pessimistic in this case - no matter how large the number of the first allele appearance during the sequencing process is, only one appearance of a different allele will cause the algorithm to call heterozygous variant. This is because the algorithm is pretty much sure there is no error in the previous steps of the analysis, so what is written in the pileupfile is what really occurs in the genome.
+
+The first choice is p = 0.8. It seems to be pretty pessimistic to chose that value, as the quality strings in the pileup file indicate that base call accuracies go up to 99.9% for each base. This choice is good for understanding the decision making though. 
 
 
 
