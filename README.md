@@ -85,9 +85,12 @@ It is as well interesting to notice that false predictions are mostly overlapped
 Indels are known to occur less frequently in the genome than SNVs do, so the last choice is to set probability of success to be adaptive - p = 0.8 if the site is a SNV or a match and p = 0.6 if it is an indel. The confusion matrix in this case is shown below. 
 
 <p align="left">
-  <img src="images/Conf_matrix_adaptive.png" height = 250 width = 450 coords = "500,163,6,7">
+  <img src="images/Conf_matrix_adaptive.png" height = 250 width = 450>
 </p>
 
+These seem to be very good results - the implemented solution found nearly 96% of all variants. Precision also went up for a couple of percent. This caused F1 score to go up to 81%, which is, compared to earlier results, quiet successful. 
+
+Perhaps results are expected to be a little bit better, but if you opened pileup file you would notice that the data was not filtered - there is some low coverage data that is not suitable for processing and needs to be filtered out.
 
 
 
