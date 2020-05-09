@@ -53,7 +53,7 @@ The test VCF file is created with bcftools call tool.
 The first choice is p = 0.9. The confusion matrix is shown below. 
 
 <p align="left">
-  <img src="images/Confusion_matrix_09.png" height = 250 width = 430>
+  <img src="images/Confusion_matrix_09.png" height = 250 width = 450>
 </p>
 
 According to metrics written next to the confusion matrix, these results seem to be very bad - precision is unacceptably low. What caused this is a large number of false positives, variants that are present in the implemented solution, but not in the bcftools call tool. Variants are shown in the figure below (note that not all variants are shown in the figure, for the purpose of making it interpretable).
