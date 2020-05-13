@@ -3,7 +3,9 @@
 > The goal of this project was implementation of variant calling algorithm based on deciding on binomial distribution in python and its results analysis. 
 
 !!! part1_VCF.py can be run from the command window.
+
     part1_VCF.py --pileup=my_pileup_file.pileup --p=0.8 -o - takes pileup name and probability of success and outputs VCF file if parameter -o my_output_file.vcf
+    
     part1_VCF.py --pileup=my_pileup_file.pileup --p=0.8
 ## What is Variant Calling?
 
@@ -14,7 +16,7 @@
   <img src="images/intro_diag.png">
 </p>
 
-The input of variant calling algorithm is a pileup file. Pileup file is a text file that summarizes the base calls of aligned reads to a reference sequence. A couple of lines in pileup file is shown below. Each line summarize one particular position in the genome. (Find out more 
+The input of variant calling algorithm is a pileup file. Pileup file is a text file that summarizes the base calls of aligned reads to a reference sequence. A couple of lines in pileup file is shown below. Each line summarize one particular position in the genome. 
 
 
 <p align="center">
