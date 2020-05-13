@@ -72,7 +72,7 @@ According to metrics written next to the confusion matrix, these results seem to
 Variants are shown in the figure below (note that not all variants are shown in the figure, for the purpose of making it interpretable).
 
 <p align="left">
-  <img src="images/grafikp09.png">
+  <img src="images/variantsplotp09.png">
 </p>
 
 As it can be seen from the figure, decision making is pretty pessimistic in this case - no matter how large the number of the first allele appearance during the sequencing process is, only one appearance of a different allele will cause the algorithm to call heterozygous variant. This is because the algorithm is pretty much sure there is no error in the previous steps of the analysis, so what is written in the pileupfile is what really occurs in the genome.
@@ -88,7 +88,7 @@ The second choice is p = 0.8. It seems to be a pessimistic choice, as the qualit
 These results are much better than the previous one. True predictions went up, while false predictions decreased. As false positives decreased twenty-fold, precision is almost ten times larger. Variants are again shown in the figure below.
 
 <p align="left">
-  <img src="images/grafikp08.png">
+  <img src="images/variantsplotp08.png">
 </p>
 
 What is most striking when looking at the figure, is that the false positives that had very small number of second alleles (1 or 2) are now missing. As the probability of the success decreased, algorithm is more flexible and is allowed to consider whether some low count site represents the error or not. 
