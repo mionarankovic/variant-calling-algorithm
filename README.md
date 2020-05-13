@@ -13,6 +13,8 @@ Examples:
 The first one takes pileup file and probability of success as inputs and outputs VCF file with the name given.
 The second one takes pileup file and probability of success as inputs and outputs VCF on stdout.
 
+In order to run it properly, you should download fai file uploaded to this project and put it in the same directory with the script.
+
 Youtube video presentation: https://youtu.be/a-MCBty3oG8
 
 ## What is Variant Calling?
