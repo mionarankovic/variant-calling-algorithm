@@ -6,7 +6,7 @@ BinomialVariantCaller.py can be run from the command window.
 
 Examples:
 
-    BinomialVariantCaller.py --pileup=test_file.pileup --p=0.8 -o my_output_vcf.vcf
+    BinomialVariantCaller.py --pileup=test_file.pileup --p=0.8 -o output_vcf.vcf
     
     BinomialVariantCaller.py --pileup=test_file.pileup --p=0.8
     
