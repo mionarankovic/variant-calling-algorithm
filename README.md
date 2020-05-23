@@ -2,13 +2,13 @@
 
 > The goal of this project was implementation of variant calling algorithm based on deciding on binomial distribution in python and its results analysis. 
 
-part1_VCF.py can be run from the command window.
+BinomialVariantCaller.py can be run from the command window.
 
 Examples:
 
-    part1_VCF.py --pileup=my_pileup_file.pileup --p=0.8 -o my_output_vcf.vcf
+    BinomialVariantCaller.py --pileup=test_file.pileup --p=0.8 -o my_output_vcf.vcf
     
-    part1_VCF.py --pileup=my_pileup_file.pileup --p=0.8
+    BinomialVariantCaller.py --pileup=test_file.pileup --p=0.8
     
 The first one takes pileup file and probability of success as inputs and outputs VCF file with the name given.
 The second one takes pileup file and probability of success as inputs and outputs VCF on stdout.
